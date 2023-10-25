@@ -32,7 +32,19 @@ def menu():
 
 
         elif num_input == 2:
-            print(f'The encoded password is {encoded_string}, and the original password is {num_num}.')
+            #This code was added by tim.
+            new_pass = ""
+            for char in encoded_string:
+                if char == '0':
+                    new_pass += '7'
+                elif char == '1':
+                    new_pass += '8'
+                elif char == '2':
+                    new_pass += '9'
+                else:
+                    new_pass += str(int(encoded_string) - 3)
+
+            print(f'The encoded password is {encoded_string}, and the original password is {new_pass}.')
 
 
         elif num_input == 3:
